@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+
+    <title>Contact</title>
+    <style>
+   
+        #header {
+            
+        transition: ease-in-out 0.3s;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        z-index: 997;
+        overflow-y: auto;
+      }
+      
+      
+      #header h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+      }
+      
+      #header h1 a, #header h1 a:hover {
+        color: #fff;
+        line-height: 1;
+        display: inline-block;
+      }
+      
+      #header h2 {
+        font-size: 24px;
+        margin-top: 20px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      
+      #header h2 span {
+        color: #fff;
+        border-bottom: 2px solid #18d26e;
+        padding-bottom: 6px;
+      }
+      
+      
+      
+      
+      
+        #header h2 {
+          font-size: 20px;
+          line-height: 30px;
+      
+        
+      }
+      
+      /* Header Top */
+      #header.header-top {
+        height: 80px;
+        m,
+        left: 0;
+        top: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.9);
+      }
+      
+      #header.header-top .social-links, #header.header-top h2 {
+        display: none;
+      }
+      
+      #header.header-top h1 {
+        margin-left:auto;
+        font-size: 36px;
+      }
+      
+      #header.header-top .container {
+        display: flex;
+       
+      }
+      
+      #header.header-top .navbar {
+        margin: 0;
+      }
+      
+      
+        #header.header-top h1 {
+          font-size: 26px;
+        }
+      }
+      
+      /*--------------------------------------------------------------
+      # Navigation Menu
+      --------------------------------------------------------------*/
+      /**
+      * Desktop Navigation 
+      */
+      .navbar {
+        padding: 0;
+        margin-top: 35px;
+      }
+      
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        align-items: center;
+      }
+      
+      .navbar li {
+        position: relative;
+      }
+      
+      .navbar li + li {
+        margin-left: 30px;
+      }
+      
+      .navbar a {
+        display: flex;
+        
+        justify-content: space-between;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        white-space: nowrap;
+        transition: 0.3s;
+      }
+      
+      .navbar a i {
+        font-size: 12px;
+        line-height: 0;
+        margin-left: 5px;
+      }
+      
+      
+      
+      .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+        visibility: visible;
+        width: 25px;
+      }
+      
+      .navbar a:hover, .navbar .active, .navbar li:hover > a {
+        color: #fff;
+      }
+      .container{
+        display:inline-block;
+      
+      
+      }
+      
+          </style>
+        </head>
+      
+      <body style='background-color:black;color:white;'>
+        <header>
+      <
+      <nav class="navbar fixed-top navbar-light bg-transparant justify-content-end"style="background-color:black;width:100%;height:75px; ;">
+      <p style='margin:auto;color:cyan;font-family:fantasy;'>BookYourTrip</p>
+      <a  href="#" style='color:cyan;margin:auto'></a>
+      <a  href="#" style='color:cyan;margin:auto'></a>
+      <a  href="#" style='color:cyan;margin:auto'></a>
+      <a  href="#" style='color:cyan;margin:auto'></a>
+      
+        <ul> 
+                <li><a class="nav-link active" href="http://127.0.0.1:8000">Home</a></li>
+                <li><a class="nav-link" href="http://127.0.0.1:8000/about" style="color:cyan;font-family:;">Images</a></li>
+                <li><a class="nav-link" href="http://127.0.0.1:8000/services" style="color:cyan;font-family:;">Services</a></li>
+                <li><a class="nav-link" href="http://127.0.0.1:8000/booking" style="color:cyan;font-family:;">Booking</a></li>
+                <li><a class="nav-link" href="" style="color:cyan;font-family:;"></a></li>
+                <li><a class="nav-link" href="" style="color:cyan;font-family:;"></a></li>
+                
+              </ul>
+             
+               
+      </nav>
+      </header>
+      <br><br><br><br>
+      <section id="one">
+      
+      <div class='container-fluid' >
+        <div class='card' style='background-color:black;color:white;'>
+       
+        {% block content %}
+        {% for i in book %}
+      
+      <div class='row'>
+          <div class='col'>
+          
+        
+            <img  src="{{i.profile.url}}" width='600' height='290' foat='right'>
+            </div>
+          
+      
+      
+      
+        <div class='col' style="text-align: center;">
+          
+      <h1 style='color:cyan;'>{{i.name}}</h1>
+      <p>{{i.summary}}</p>
+      <p style='color:red;'><span style='color:cyan;'>Indian Rupee</span> {{i.price}}</p>
+      <a href="http://127.0.0.1:8000/bookingform" class="btn btn-warning" id = '{{book.id}}' style=" background:linear-gradient(cyan,black);color:black;border-radius:7px;letter-spacing:1px;" >Book here..</a>
+      
+             <a href="http://127.0.0.1:8000/about" class="btn btn-warning" id = '{{book.id}}' style=" background:linear-gradient(cyan,black);color:black;border-radius:7px;letter-spacing:1px;">Visit for More</a>
+        </div>
+          
+         
+      
+        
+      </div>
+      </div><br></br>
+      </div>
+      
+        {% endfor %}
+      {% endblock %}
+      
+      </div>
+      </body>
+      </html>
+      

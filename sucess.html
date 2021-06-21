@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='st.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Contact</title>
+</head>
+
+<style>
+    body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("../img/bg.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  @media (min-width: 1024px) {
+    body::before {
+      background-attachment: fixed;
+    }
+  }
+  
+  a {
+    color: #18d26e;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #35e888;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  .conn{
+      padding:143px;
+  }
+    </style>
+  
+  </head>
+  <body >
+  <div class='conn'>
+      <center>
+      <h1 style="color:cyan"> " We Look Forword to Serve you "</h1><br>
+      <em><h3 style="color:">Please check your Email for the confirmations</h3></em>
+      <h2 style="color:blue">Thank you</h2><br>
+  
+      <a href="http://127.0.0.1:8000" class="btn btn-warning" id = '{{book.id}}' style=" background:linear-gradient(cyan,black);color:black;border-radius:7px;letter-spacing:1px;">Visit for More</a>
+  </center>
+  </div>
+  
+
+
+    
+</body>
+</html>

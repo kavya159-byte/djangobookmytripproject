@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+    <title>Contact</title>
+</head>
+<style>
+    #header {
+     transition: ease-in-out 0.3s;
+     position: relative;
+     height: 100vh;
+     display: flex;
+     
+     z-index: 997;
+     overflow-y: auto;
+   }
+   
+   
+   #header h1 {
+     font-size: 48px;
+     margin: 0;
+     padding: 0;
+     line-height: 1;
+     font-weight: 700;
+     font-family: "Poppins", sans-serif;
+   }
+   
+   #header h1 a, #header h1 a:hover {
+     color: #fff;
+     line-height: 1;
+     display: inline-block;
+   }
+   
+   #header h2 {
+     font-size: 24px;
+     margin-top: 20px;
+     color: rgba(255, 255, 255, 0.8);
+   }
+   
+   #header h2 span {
+     color: #fff;
+     border-bottom: 2px solid #18d26e;
+     padding-bottom: 6px;
+   }
+   
+   
+   
+   
+   
+     #header h2 {
+       font-size: 20px;
+       line-height: 30px;
+   
+     
+   }
+   
+   /* Header Top */
+   #header.header-top {
+     height: 80px;
+     m,
+     left: 0;
+     top: 0;
+     right: 0;
+     background: rgba(0, 0, 0, 0.9);
+   }
+   
+   #header.header-top .social-links, #header.header-top h2 {
+     display: none;
+   }
+   
+   #header.header-top h1 {
+     margin-left:auto;
+     font-size: 36px;
+   }
+   
+   #header.header-top .container {
+     display: flex;
+    
+   }
+   
+   #header.header-top .navbar {
+     margin: 0;
+   }
+   
+   
+     #header.header-top h1 {
+       font-size: 26px;
+     }
+   }
+   
+   /*--------------------------------------------------------------
+   # Navigation Menu
+   --------------------------------------------------------------*/
+   /**
+   * Desktop Navigation 
+   */
+   .navbar {
+     padding: 0;
+     margin-top: 35px;
+   }
+   
+   .navbar ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     list-style: none;
+     align-items: center;
+   }
+   
+   .navbar li {
+     position: relative;
+   }
+   
+   .navbar li + li {
+     margin-left: 30px;
+   }
+   
+   .navbar a {
+     display: flex;
+     
+     justify-content: space-between;
+     padding: 0;
+     font-family: "Poppins", sans-serif;
+     font-size: 16px;
+     font-weight: 400;
+     color: rgba(255, 255, 255, 0.7);
+     white-space: nowrap;
+     transition: 0.3s;
+   }
+   
+   .navbar a i {
+     font-size: 12px;
+     line-height: 0;
+     margin-left: 5px;
+   }
+   
+   
+   
+   .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
+     visibility: visible;
+     width: 25px;
+   }
+   
+   .navbar a:hover, .navbar .active, .navbar li:hover > a {
+     color: #fff;
+   }
+   
+   
+         *{
+       margin:0;
+       padding:0;
+       box-sizing:border-box;
+       font-family:'Poppins',sans-serif;
+   }
+   body{
+       display:flex;
+       height:100vh;
+       justify-content:center;
+       align-items:center;
+       background:linear-gradient(#000000,#000000);
+       
+   }
+   .container-fluid{
+   color:blue;
+   max-width:550px;
+   width:100%;
+   background-color:cyan ;
+   padding:15px,30px;
+   border-radius:5px;
+   padding-top:100px;
+   background:transparent;
+   
+   }
+   .container-fluid .title{
+       font-size:25px;
+       font-weight:500;
+       position:relative;
+   }
+   .container-fluid .title::before{
+       content:'';
+       position:absolute;
+       left:0;
+       bottom:0;
+       height:3px;
+       width:30px;
+       /*background:linear-gradient(cyan,blue)*/
+   }
+   .container-fluid form .user-details{
+   display:flex;
+   flex-wrap:wrap;
+   justify-content:space-between;
+   margin:20px 0  12px 0;
+   
+   }
+   form .user-details .input-box{
+       width:45%;
+       margin-bottom:15px;
+   
+   
+   }
+   .user-details .input-box .details{
+       display:block;
+       font-weight:500;
+       margin-bottom:5px;
+   }
+   .user-details .input-box input{
+       height:45px;
+       width:100%;
+       outline:none;
+       border-radius:5px;
+       border:1px solid gray;
+       padding-left:16px;
+   }
+   .user-details .input-box input:focus,
+   .user-details .input-box input:valid{
+       border-color:blue;
+       
+   }
+   form .gender-details .category{
+       display:flex;
+       width:80%;
+       margin:14px 0;
+       justify-content:space-between;
+       
+   }
+   .gender-details .category lable{
+       display:flex;
+       align-items:left;
+   }
+   
+   form .button{
+       height:45px;
+       margin:45px 0;
+       }
+       
+   form .button input{
+       align-items:center;
+           height:100%;
+           width:100%;
+           outline:none;
+           color:cyan;
+           font-size:18px;
+           border:none;
+           
+           border-radius:5px;
+           letter-spacing:1px;
+           background:linear-gradient(cyan,black)
+           
+           
+       }
+   form .button input:hover{
+       background:linear-gradient(black,cyan)
+   }
+   
+   
+   
+     </style>
+   </head>
+   <body>
+   <header>
+   
+   <nav class="navbar fixed-top navbar-light bg-transparant justify-content-end"style="background-color:transparant;width:100%;height:75px; ;">
+   <p style='margin:auto;color:cyan;font-size:20px;font-family:fantasy;'>Book Your Trip</p>
+   <a  href="#" style='color:cyan;margin:auto'></a>
+   <a  href="#" style='color:cyan;margin:auto'></a>
+   <a  href="#" style='color:cyan;margin:auto'></a>
+   <a  href="#" style='color:cyan;margin:auto'></a>
+   
+     <ul> 
+             <li><a class="nav-link active" href="http://127.0.0.1:8000">Home</a></li>
+             <li><a class="nav-link" href="http://127.0.0.1:8000/about" style="color:cyan;font-family:;">Images</a></li>
+             <li><a class="nav-link" href="http://127.0.0.1:8000/services" style="color:cyan;font-family:;">Services</a></li>
+             <li><a class="nav-link" href="http://127.0.0.1:8000/booking" style="color:cyan;font-family:;">Booking</a></li>
+             
+             <li><a class="nav-link" href="" style="color:cyan;font-family:;"></a></li>
+             <li><a class="nav-link" href="" style="color:cyan;font-family:;"></a></li>
+           </ul>
+          
+            
+   </nav>
+   </header>
+       
+       
+       
+   
+   <div class='container-fluid' >
+       <div class='title'></div>
+       <form method='POST' action='#' style='color:cyan;border:2px 4px solid gray;'>
+       {% csrf_token %}
+           <div class='user-details'>
+           
+           <div class='input-box'>
+           <span class='details'>Full Name </span>
+           <input type='text' placeholder='enter your name'required  title="only letters are accepted" name="x">
+           </div>
+           
+           <div class='input-box'>
+           <span class='details'>Phone Number </span>
+           <input type='text' placeholder='Phone number here'required   title="only Numbers are accepted">
+           </div>
+           
+           <div class='input-box'>
+           <span class='details'>Email</span>
+           <input type='text' placeholder='Enter Your Email' required name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  title="'xyz@gmail.com'Email Should matches the above requirement">
+           </div>
+           <div class='input-box'>
+           <span class='details'>Parmanent-Addssre </span>
+           <input type='text' placeholder='Enter your Address'required>
+           </div>
+           <div class='input-box'>
+           <span class='details'>Country</span>
+           <input type='text' placeholder='Country name'required>
+           </div>
+           <div class='input-box'>
+           <span class='details'>Place</span>
+           <input type='text' placeholder='Enter your Place'required>
+           </div>
+           <div class='input-box'>
+           <span class='details'>State </span>
+           <input type='text' placeholder='Enter your State'required>
+           </div>
+           <div class='input-box'>
+           <span class='details'>Pincode</span>
+           <input type='text' placeholder='enter your name'required title='wrong hereonly numbers are acceptable ' pattern="[0-9]{6}">
+           </div>
+           </div>
+           <div class='button'>
+           <input type='submit' value='sumbit'>
+           </div>
+           </div>
+           
+           </div>
+           
+           </form>
+       
+   
+    
+</body>
+</html>
